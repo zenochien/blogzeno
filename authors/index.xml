@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on blogzenoc</title>
+    <link>https://zenochien.github.io/bloghaizz/authors/</link>
+    <description>Recent content in Authors on blogzenoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 14 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://zenochien.github.io/bloghaizz/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jane Smith</title>
+      <link>https://zenochien.github.io/bloghaizz/authors/jane-smith/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/authors/jane-smith/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>External link test</title>
+      <link>https://zenochien.github.io/bloghaizz/authors/external-link-test/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/authors/external-link-test/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on blogzenoc</title>
+    <link>https://zenochien.github.io/bloghaizz/tags/</link>
+    <description>Recent content in Tags on blogzenoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 14 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://zenochien.github.io/bloghaizz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C#</title>
+      <link>https://zenochien.github.io/bloghaizz/tags/c#/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://zenochien.github.io/bloghaizz/tags/development/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Net</title>
+      <link>https://zenochien.github.io/bloghaizz/tags/net/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/tags/net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://zenochien.github.io/bloghaizz/tags/themes/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xamarin</title>
+      <link>https://zenochien.github.io/bloghaizz/tags/xamarin/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/tags/xamarin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://zenochien.github.io/bloghaizz/tags/hugo/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

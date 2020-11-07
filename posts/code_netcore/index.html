@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Phạm Minh Chiến">
+    <meta name="description" content="Hardware Intrinsics in .NET Core">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hardware Intrinsics in .NET Core"/>
+<meta name="twitter:description" content="Hardware Intrinsics in .NET Core"/>
+
+    <meta property="og:title" content="Hardware Intrinsics in .NET Core" />
+<meta property="og:description" content="Hardware Intrinsics in .NET Core" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zenochien.github.io/bloghaizz/posts/code_netcore/" />
+<meta property="article:published_time" content="2020-01-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-03T00:00:00+00:00" />
+
+
+    <title>
+  Hardware Intrinsics in .NET Core · blogzenoc
+</title>
+
+    
+      <link rel="canonical" href="https://zenochien.github.io/bloghaizz/posts/code_netcore/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/bloghaizz/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/bloghaizz/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/bloghaizz/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/bloghaizz/images/apple-touch-icon.png">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.76.5" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/bloghaizz">
+      blogzenoc
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/about/">About Me</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/posts/">BlogZenoC</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/projects/">My CV</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://zenochien.github.io/bloghaizz/pt-br/"></a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Hardware Intrinsics in .NET Core</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2020-01-03T00:00:00Z'>
+                October, 3030
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Vài năm trước, <a href="https://devblogs.microsoft.com/dotnet/the-jit-finally-proposed-jit-and-simd-are-getting-married/">chúng tôi đã quyết định là hỗ trợ mã SMID trong net</a>. Mình giới thiệu giá trị System.Numerics không gian với <code>Vector2, Vector3, Vector4, Vector&lt;T&gt;</code>, và các loại liên quan.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">SIMD is a technology that employs data parallelization at the CPU level. 
+Multi-threading and SIMD complement each other: multi-threading allows 
+parallelizing work over multiple cores while SIMD allows parallelizing 
+work within a single core.
+Tạm dịch : SIMD là một công nghệ sử dụng song song dữ liệu ở cấp độ CPU. 
+Đa luồng và SIMD bổ sung cho nhau: đa luồng cho phép &#39;parallelizing = song song&#39;
+làm việc trên nhiều lõi trong khi SIMD cho phép &#39;parallelizing = song song&#39; làm việc
+trong một lõi duy nhất.
+</code></pre></div><p>Here is example how I would use to</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// Initalize some vectors
+
+Vector&lt;float&gt; values = GetValues();         //Giảm
+Vector&lt;float&gt; increment = GetIncrement();   //Tăng
+
+// The next line will leverage SIMD to perform the
+// addition of multiple elements in parallel:
+
+Vector&lt;float&gt; result = values + increment; //Tăng + Giảm = KẾT QUẢ
+</code></pre></div><h6 id="c-and-simd">C# and SIMD</h6>
+<p>It would be great if C# compller and .Net JIT compiler utillze SIMD instructions of current and future processors. The projects that require heavy calculations (MathDotNet.Numerices for example) would greatly benefit from this feature.</p>
+<p><img src="../../images/DotNet/4.jpg" alt="image">
+<img src="../../images/DotNet/5.jpg" alt="image"></p>
+<h2 id="what-are-hardware-intrinsics-tạm-dịch-bản-chất-hadware-là-gì">What are hardware intrinsics (Tạm dịch: Bản chất Hadware là gì?)</h2>
+<p>In .NET Core 3.0, we added a new feature called hardware intrinsics. Hardware intrinsics provide access to many of these hardware specific instructions that can’t easily be exposed in a more general-purpose mechanism ( general-purpose mechanism = cơ chế mục đích chung ).</p>
+<p>The new intrinsics and supporting types are exposed under the <code>System.Runtime.Intrinsics</code> namespace. For .NET Core 3.0 there currently exists one namespace: <code>System.Runtime.Intrinsics.X86</code>. We are working on exposing hardware intrinsics for other platforms, such as <code>System.Runtime.Intrinsics.Arm</code>.</p>
+<p>An example of such an algorithm might look like the following:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">public int Sum(ReadOnlySpan&lt;int&gt; source)
+{
+    int result = 0; //kết quả trả 0
+            
+    for (int i = 0; i &lt; source.Length; i++) //nếu i hơn chiều dài 
+    {
+        result += source[i]; //tính kết quả chiều dài 
+    }
+            
+    return result; //kết quả
+}
+</code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );">
+  </script>
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>I am deaf, also can not talk and listen. Thing I do pecfect and happy, myseff live has no 'sound'</p>
+      
+      
+        ©
+        
+          2019 -
+        
+        2020
+         Phạm Minh Chiến 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/bloghaizz/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </body>
+
+</html>

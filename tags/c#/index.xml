@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on blogzenoc</title>
+    <link>https://zenochien.github.io/bloghaizz/tags/c#/</link>
+    <description>Recent content in C# on blogzenoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 14 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://zenochien.github.io/bloghaizz/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hiểu về Xamarin</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/hugo-template-primer/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/hugo-template-primer/</guid>
+      <description>“Xamarin là nền tảng của Microsoft dùng để phát triển ứng dụng di động cho Android và iOS với nền tảng Mono .NET và ngôn ngữ C#.” Đó là định nghĩa về Xamarin mà bạn cần phải hiểu trước khi bắt đầu học lập trình trên nền tảng này. Vậy thì hiểu như thế nào mới đúng?
+Đầu tiên có thể bạn biết có 2 hệ điều hành di động thông minh “bự” nhất hiện tại là Android (Google) và iOS (Apple) và để phát triển ứng dụng trên đó Google và Apple đều đưa ra bộ SDK và các công cụ tương ứng để lập trình viên có thể sử dụng, ta gọi đây là phương pháp “chính chủ”, cụ thể cơ bản ta có: Android (Google): Android SDK, Java, Android Studio.</description>
+    </item>
+    
+  </channel>
+</rss>

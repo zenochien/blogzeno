@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Phạm Minh Chiến">
+    <meta name="description" content="Bắt đầu học UWP">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bắt đầu học UWP"/>
+<meta name="twitter:description" content="Bắt đầu học UWP"/>
+
+    <meta property="og:title" content="Bắt đầu học UWP" />
+<meta property="og:description" content="Bắt đầu học UWP" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zenochien.github.io/bloghaizz/posts/hocuwp/" />
+<meta property="article:published_time" content="2020-03-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-11T00:00:00+00:00" />
+
+
+    <title>
+  Bắt đầu học UWP · blogzenoc
+</title>
+
+    
+      <link rel="canonical" href="https://zenochien.github.io/bloghaizz/posts/hocuwp/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/bloghaizz/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/bloghaizz/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/bloghaizz/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/bloghaizz/images/apple-touch-icon.png">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.76.5" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/bloghaizz">
+      blogzenoc
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/about/">About Me</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/posts/">BlogZenoC</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/projects/">My CV</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://zenochien.github.io/bloghaizz/pt-br/"></a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Bắt đầu học UWP</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2020-03-11T00:00:00Z'>
+                October, 11110
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="tập-quen-học-uwp">Tập quen học UWP</h2>
+<h4 id="bài-1-khơi-đầu">Bài 1: khơi đầu</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    public sealed partial class MainPage : Page
+    {
+        public MainPage()
+        {
+            this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            txtMau.Text = &#34;Bạn chọn màu gì &#34;;
+            string colors = string.Empty;
+            CheckBox[] mausac = new CheckBox[]
+            {
+                colors1,colors2,colors3,colors4
+            };
+            foreach(var chonmau in mausac)
+            {
+                if (chonmau.IsChecked==true)
+                {
+                    colors += chonmau.Content + &#34;, &#34;;
+                }
+            }
+            txtMau.Text += colors ;
+        }
+    }
+}
+</code></pre></div><h2 id="minh-họa-output">Minh họa Output</h2>
+<p><img src="../../images/26.jpg" alt="image"></p>
+<h4 id="bài-2-tạo-button-dynamically-uwp">Bài 2: Tạo Button Dynamically UWP</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">public MainPage()
+        {
+            this.InitializeComponent();
+            nutbutton();
+        }
+
+        private void nutbutton()
+        {
+            Button nut = new Button();
+            nut.Content = &#34;Hãy nút có gì :)&#34;;
+            nut.Width = 150;
+            nut.Height = 70;
+            nut.Click += button_click;
+            stack.Children.Add(nut);
+
+        }
+
+        private void button_click(object sender, RoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+            b.Content = &#34;haha bạn bị lừa rồi&#34;;
+        }
+    }
+</code></pre></div><h2 id="màn-hình-output">Màn hình Output</h2>
+<p><img src="../../images/25.jpg" alt="image"></p>
+<h4 id="bài-3-nút-xóa">Bài 3: Nút Xóa</h4>
+<h2 id="tiếp-là-nút-remove">Tiếp là nút remove</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">        public MainPage()
+        {
+            this.InitializeComponent();
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            nutxoa.Children.Remove((UIElement)this.FindName(&#34;txt&#34;));
+        }
+    }
+</code></pre></div><h2 id="màn-hình-output-1">Màn hình Output</h2>
+<p><img src="../../images/27.jpg" alt="image"></p>
+<h4 id="bài-4-message">Bài 4: Message</h4>
+<h2 id="tiếp-là-message">Tiếp là message</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string nhantin = &#34;Tôi là Root, Root gửi chào bạn&#34;;
+            MessageDialog nt = new MessageDialog(nhantin, &#34;OK, Đã xem!&#34;);
+            await nt.ShowAsync();
+        }
+    }
+</code></pre></div><h2 id="màn-hình-output-2">Màn hình Output</h2>
+<p><img src="../../images/28.jpg" alt="image"></p>
+<h2 id="bài-5-cỡ-slide">Bài 5: Cỡ Slide</h2>
+<h2 id="tiếp-học-slide">Tiếp học Slide</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">        public MainPage()
+        {
+            this.InitializeComponent();
+
+        }
+
+        private void slide_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            Slider slider = sender as Slider;
+            if(slide!=null)
+            {
+                txt.FontSize = slide.Value;
+            }
+        }
+    }
+</code></pre></div><h2 id="màn-hình-output-3">Màn hình Output</h2>
+<p><img src="../../images/29.jpg" alt="image"></p>
+<h4 id="bài-6-đơn-giản-listview">Bài 6: Đơn giản listView</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">        public MainPage()
+        {
+            this.InitializeComponent();
+
+            string[] mausac = { &#34;Xanh&#34;, &#34;Đỏ&#34;, &#34;Tím&#34;, &#34;Hồng&#34;, &#34;Đen&#34;, &#34;Cam&#34; };
+            lv.ItemsSource = mausac;
+
+        }
+
+        private async void lv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListView xemlv = sender as ListView;
+
+            string nhungmau = xemlv.SelectedItems.ToString();
+            MessageDialog tb = new MessageDialog(&#34;Những màu sắc: &#34; + nhungmau);
+            await tb.ShowAsync();
+        }
+    }
+</code></pre></div><h2 id="màn-hình-output-4">Màn hình Output</h2>
+<p><img src="../../images/31.jpg" alt="image"></p>
+<h4 id="bài-7-stlie-view-1">Bài 7: Stlie View 1</h4>
+<h2 id="làm-stile-đơn-gian">Làm Stile đơn gian</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">             private void Click_OK(object sender, RoutedEventArgs e)
+        {
+            XemStile.IsPaneOpen = !XemStile.IsPaneOpen;
+
+        }
+</code></pre></div><h2 id="màn-hình-output-5">Màn hình Output</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    &lt;StackPanel Orientation=&#34;Horizontal&#34;&gt;
+        &lt;SplitView x:Name=&#34;XemStile&#34; DisplayMode=&#34;Overlay&#34;&gt;
+        &lt;SplitView.Pane&gt;
+            &lt;StackPanel&gt;
+                &lt;TextBlock Text=&#34;Ví dụ 1&#34;/&gt;
+                &lt;TextBlock Text=&#34;Ví dụ 2&#34;/&gt;
+                &lt;TextBlock Text=&#34;Ví dụ 3&#34;/&gt;
+            &lt;/StackPanel&gt;
+        &lt;/SplitView.Pane&gt;
+
+        &lt;SplitView.Content&gt;
+            &lt;StackPanel&gt;
+                &lt;TextBlock Text=&#34;Giả sử 1&#34;/&gt;
+                &lt;TextBlock Text=&#34;Giả sử 1&#34;/&gt;
+                &lt;TextBlock Text=&#34;Giả sử 1&#34;/&gt;
+            &lt;/StackPanel&gt;
+         
+        &lt;/SplitView.Content&gt;
+        &lt;/SplitView&gt;
+        &lt;Button Content=&#34;Hãy nút thử xem&#34; Click=&#34;Click_OK&#34; /&gt;
+    &lt;/StackPanel&gt;
+</code></pre></div><p><img src="../../images/33.jpg" alt="image"></p>
+<h4 id="bài-8-stile-view-2">Bài 8: Stile View 2</h4>
+<h2 id="làm-stile-view">Làm Stile View</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MyStileView.IsPaneOpen = !MyStileView.IsPaneOpen;
+        }
+
+        private void IconsView(object sender, SelectionChangedEventArgs e)
+        {
+            if(shareItem.IsSelected)
+            {
+                ResultTextBlock.Text = &#34;Share&#34;;
+            }
+            else if (favoritesItem.IsSelected)
+            {
+                ResultTextBlock.Text = &#34;Yêu thích&#34;;
+            }
+        }
+    }
+</code></pre></div><h2 id="màn-hình-output-6">Màn hình Output</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;Grid Margin=&#34;50&#34; Background=&#34;{ThemeResource AppBarBackgroundThemeBrush}&#34;&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height=&#34;Auto&#34;/&gt;
+            &lt;RowDefinition Height=&#34;*&#34;/&gt;
+        &lt;/Grid.RowDefinitions&gt;
+        &lt;RelativePanel &gt;
+            &lt;Button x:Name=&#34;HamburgerButton&#34; FontFamily=&#34;Segoe MDL2 Assets&#34; Content=&#34;&amp;#xE700;&#34; FontSize=&#34;36&#34; 
+                    Click=&#34;HamburgerButton_Click&#34; /&gt;
+        &lt;/RelativePanel&gt;
+        &lt;SplitView x:Name=&#34;MyStileView&#34; Grid.Row=&#34;1&#34; 
+                   DisplayMode=&#34;CompactOverlay&#34; OpenPaneLength=&#34;200&#34;
+                   CompactPaneLength=&#34;56&#34; 
+                   HorizontalAlignment=&#34;Left&#34;&gt;
+            &lt;SplitView.Pane&gt;
+                &lt;ListBox SelectionMode=&#34;Single&#34; Name=&#34;IconBoxList&#34; SelectionChanged=&#34;IconsView&#34;&gt;
+                    &lt;ListBoxItem Name=&#34;shareItem&#34; &gt;
+                        &lt;StackPanel Orientation=&#34;Horizontal&#34; &gt;
+                            &lt;TextBlock FontFamily=&#34;Segoe MDL2 Assets&#34; FontSize=&#34;36&#34; Text=&#34;&amp;#xE72D;&#34; /&gt;
+                            &lt;TextBlock Text=&#34;Share&#34; FontSize=&#34;26&#34; Margin=&#34;20,0,0,0&#34;/&gt;
+                        &lt;/StackPanel&gt;
+                    &lt;/ListBoxItem&gt;
+
+                    &lt;ListBoxItem Name=&#34;favoritesItem&#34; &gt;
+                        &lt;StackPanel Orientation=&#34;Horizontal&#34; &gt;
+                            &lt;TextBlock FontFamily=&#34;Segoe MDL2 Assets&#34; FontSize=&#34;36&#34; Text=&#34;&amp;#xE734;&#34; /&gt;
+                            &lt;TextBlock Text=&#34;Yêu thích&#34; FontSize=&#34;26&#34;  Margin=&#34;20,0,0,0&#34;/&gt;
+                        &lt;/StackPanel&gt;
+                    &lt;/ListBoxItem&gt;
+                &lt;/ListBox&gt;
+            &lt;/SplitView.Pane&gt;
+            &lt;SplitView.Content&gt;
+                &lt;TextBlock x:Name=&#34;ResultTextBlock&#34;/&gt;
+            &lt;/SplitView.Content&gt;
+        &lt;/SplitView&gt;
+        &lt;TextBlock Text=&#34;Chào bạn&#34; FontSize=&#34;40&#34; Margin=&#34;300,50,0,0&#34;/&gt;
+    &lt;/Grid&gt;
+</code></pre></div><p><img src="../../images/32.jpg" alt="image"></p>
+<h2 id="bài-9-chức-năng-navigation">Bài 9: Chức năng Navigation</h2>
+<h4 id="học-chức-năng-navigate">Học chức năng Navigate</h4>
+<p>Chú ý: Thêm <code>internal static string SomeImportantValue;</code> vào App.xaml.cs</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">MainPage.xaml
+
+ public MainPage()
+        {
+            this.InitializeComponent();
+            myfram.Navigate(typeof(Page1));
+
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            myfram.Navigate(typeof(Page1));
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if (myfram.CanGoBack)
+            {
+                myfram.GoBack();
+            }
+        }
+
+        private void Forward_Click(object sender, RoutedEventArgs e)
+        {
+            if (myfram.CanGoForward)
+            {
+                myfram.GoForward();
+            }
+        }
+
+        private void NavigateButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page2));
+        }
+    }
+
+Page1.xaml
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Page2));
+        }
+
+Page2.xaml
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var value = (string)e.Parameter;
+            ValueTextBox.Text = value;
+        }
+
+</code></pre></div><h2 id="màn-hình-output-7">Màn hình Output</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">MainPage.xaml
+
+ &lt;StackPanel Orientation=&#34;Horizontal&#34;&gt;
+        &lt;StackPanel Orientation=&#34;Horizontal&#34;&gt;
+            &lt;Button x:Name=&#34;Home&#34; Content=&#34;Home&#34; Click=&#34;Home_Click&#34;  Margin=&#34;0,0,20,0&#34;/&gt;
+            &lt;Button x:Name=&#34;Back&#34; Content=&#34;Back&#34; Click=&#34;Back_Click&#34;  Margin=&#34;0,0,20,0&#34;/&gt;
+            &lt;Button x:Name=&#34;Forward&#34; Content=&#34;Forward&#34; Click=&#34;Forward_Click&#34;  Margin=&#34;0,0,20,0&#34;/&gt;
+            &lt;Button x:Name=&#34;NavigateButton&#34; Content=&#34;Chức năng navigate&#34; Click=&#34;NavigateButton_Click&#34;/&gt;
+        &lt;/StackPanel&gt;
+        &lt;Frame x:Name=&#34;myfram&#34;&gt;
+            
+        &lt;/Frame&gt;
+    &lt;/StackPanel&gt;
+
+Page1.xaml
+    &lt;StackPanel&gt;
+        &lt;TextBlock FontSize=&#34;30&#34; Text=&#34;Chào bạn, đây là Page 1&#34;/&gt;
+        &lt;HyperlinkButton Content=&#34;Hãy nút đi tiếp nhé&#34; Click=&#34;HyperlinkButton_Click&#34;/&gt;
+        &lt;HyperlinkButton Content=&#34;Blog của tôi&#34; NavigateUri=&#34;https://zenochien.github.io/bloghaizz/&#34;/&gt;
+    &lt;/StackPanel&gt;
+
+Page2.xaml
+   &lt;StackPanel&gt;
+        &lt;TextBlock FontSize=&#34;30&#34; Text=&#34;Chào bạn, đây là Page 2&#34;/&gt;
+        &lt;TextBox x:Name=&#34;ValueTextBox&#34; Width=&#34;200&#34;/&gt;
+        &lt;HyperlinkButton Content=&#34;Hãy nút đi tiếp nhé&#34; Click=&#34;HyperlinkButton_Click&#34;/&gt;
+    &lt;/StackPanel&gt;
+    
+Page3.xaml
+    &lt;StackPanel&gt;        
+        &lt;TextBlock FontSize=&#34;30&#34; Text=&#34;Chào bạn, đây là Page 3&#34;/&gt;
+        &lt;TextBox x:Name=&#34;ValueTextBox&#34; Width=&#34;200&#34;/&gt;
+    &lt;/StackPanel&gt;
+</code></pre></div><p><img src="../../images/34.jpg" alt="image"></p>
+<h2 id="bài-10-chức-năng-hamburger-heaven-challenge-solution">Bài 10: Chức năng Hamburger Heaven Challenge: Solution</h2>
+<h2 id="tạo-solution">Tạo Solution</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">MainPage.xaml
+  public MainPage()
+        {
+            this.InitializeComponent();
+            BackButton.Visibility = Visibility.Collapsed;
+            MyFrame.Navigate(typeof(home));
+            TitleTextBlock.Text = &#34;Trang chủ&#34;;
+            home.IsSelected = true;
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoBack)
+            {
+                MyFrame.GoBack();
+                home.IsSelected = true;
+            }
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (home.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+                MyFrame.Navigate(typeof(home));
+                TitleTextBlock.Text = &#34;Trang chủ&#34;;
+            }
+            else if (myblog.IsSelected)
+            {
+                BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(myblog));
+                TitleTextBlock.Text = &#34;My Blog&#34;;
+            }
+        }
+    }
+
+home.xaml
+    phải tạo trang mới
+myblog.xaml
+    cũng phải tạo trang mới
+</code></pre></div><h2 id="màn-hình-output-8">Màn hình Output</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">   &lt;Grid&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height=&#34;Auto&#34; /&gt;
+            &lt;RowDefinition Height=&#34;*&#34; /&gt;
+        &lt;/Grid.RowDefinitions&gt;
+
+        &lt;RelativePanel&gt;
+            &lt;Button Name=&#34;HamburgerButton&#34; 
+                    RelativePanel.AlignLeftWithPanel=&#34;True&#34;
+                    FontFamily=&#34;Segoe MDL2 Assets&#34;
+                    FontSize=&#34;36&#34; 
+                    Content=&#34;&amp;#xE700;&#34; 
+                    Click=&#34;HamburgerButton_Click&#34; /&gt;
+
+            &lt;Button Name=&#34;BackButton&#34;
+                    RelativePanel.RightOf=&#34;HamburgerButton&#34; 
+                    FontFamily=&#34;Segoe MDl2 Assets&#34; 
+                    FontSize=&#34;36&#34;
+                    Content=&#34;&amp;#xE0C4;&#34; 
+                    Click=&#34;BackButton_Click&#34;
+                     /&gt;
+
+            &lt;TextBlock Name=&#34;TitleTextBlock&#34;
+                       RelativePanel.RightOf=&#34;BackButton&#34;
+                       FontSize=&#34;28&#34;
+                       FontWeight=&#34;Bold&#34;
+                       Margin=&#34;20,5,0,0&#34;/&gt;
+
+            &lt;Button Name=&#34;SearchButton&#34; 
+                    RelativePanel.AlignRightWithPanel=&#34;True&#34;
+                    FontFamily=&#34;Segoe MDL2 Assets&#34;
+                    FontSize=&#34;36&#34; 
+                    Content=&#34;&amp;#xE1A3;&#34; /&gt;
+
+            &lt;TextBox Name=&#34;SearchTextBox&#34; 
+                     RelativePanel.LeftOf=&#34;SearchButton&#34; 
+                     Height=&#34;48&#34; 
+                     Width=&#34;200&#34;
+                     FontSize=&#34;24&#34;
+                     PlaceholderText=&#34;Search&#34; /&gt;
+        &lt;/RelativePanel&gt;
+
+        &lt;SplitView Grid.Row=&#34;1&#34; 
+                   Name=&#34;MySplitView&#34;
+                   DisplayMode=&#34;CompactOverlay&#34; 
+                   OpenPaneLength=&#34;200&#34; 
+                   CompactPaneLength=&#34;56&#34;&gt;
+            &lt;SplitView.Pane&gt;
+                &lt;ListBox SelectionMode=&#34;Single&#34; 
+                         SelectionChanged=&#34;ListBox_SelectionChanged&#34;&gt;
+                    &lt;ListBoxItem Name=&#34;home&#34;&gt;
+                        &lt;StackPanel Orientation=&#34;Horizontal&#34;&gt;
+                            &lt;TextBlock FontFamily=&#34;Segoe MDL2 Assets&#34; FontSize=&#34;36&#34; Text=&#34;&amp;#xE80F;&#34; /&gt;
+                            &lt;TextBlock FontSize=&#34;24&#34; Margin=&#34;20,0,0,0&#34;&gt;Trang chủ&lt;/TextBlock&gt;
+                        &lt;/StackPanel&gt;
+                    &lt;/ListBoxItem&gt;
+                    &lt;ListBoxItem Name=&#34;myblog&#34;&gt;
+                        &lt;StackPanel Orientation=&#34;Horizontal&#34;&gt;
+                            &lt;TextBlock FontFamily=&#34;Segoe MDL2 Assets&#34; FontSize=&#34;36&#34; Text=&#34;&amp;#xE1CE;&#34; /&gt;
+                            &lt;TextBlock FontSize=&#34;24&#34; Margin=&#34;20,0,0,0&#34;&gt;My Blog&lt;/TextBlock&gt;
+                        &lt;/StackPanel&gt;
+                    &lt;/ListBoxItem&gt;
+                &lt;/ListBox&gt;
+            &lt;/SplitView.Pane&gt;
+            &lt;SplitView.Content&gt;
+                &lt;Frame Name=&#34;MyFrame&#34;&gt;&lt;/Frame&gt;
+            &lt;/SplitView.Content&gt;
+
+        &lt;/SplitView&gt;
+
+    &lt;/Grid&gt;
+</code></pre></div><p><img src="../../images/35.jpg" alt="image"></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );">
+  </script>
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>I am deaf, also can not talk and listen. Thing I do pecfect and happy, myseff live has no 'sound'</p>
+      
+      
+        ©
+        
+          2019 -
+        
+        2020
+         Phạm Minh Chiến 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/bloghaizz/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </body>
+
+</html>

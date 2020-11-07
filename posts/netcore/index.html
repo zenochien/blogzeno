@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Phạm Minh Chiến">
+    <meta name="description" content=".NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono ">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=".NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono "/>
+<meta name="twitter:description" content=".NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono "/>
+
+    <meta property="og:title" content=".NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono " />
+<meta property="og:description" content=".NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zenochien.github.io/bloghaizz/posts/netcore/" />
+<meta property="article:published_time" content="2020-01-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-10T00:00:00+00:00" />
+
+
+    <title>
+  .NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono  · blogzenoc
+</title>
+
+    
+      <link rel="canonical" href="https://zenochien.github.io/bloghaizz/posts/netcore/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/bloghaizz/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/bloghaizz/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/bloghaizz/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/bloghaizz/images/apple-touch-icon.png">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.76.5" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/bloghaizz">
+      blogzenoc
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/about/">About Me</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/posts/">BlogZenoC</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/projects/">My CV</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://zenochien.github.io/bloghaizz/pt-br/"></a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">.NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2020-01-10T00:00:00Z'>
+                October, 10100
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Một trong những điểm mạnh của hệ sinh thái .NET là sự hỗ trợ rất tốt của các công cụ như Visual Studio. Tuy nhiên đây cũng là điểm yếu vì nó ngăn cản rất nhiều lập trình viên tiếp xúc với những lý thuyết căn bản của Framework. Trong bài viết này chúng ta sẽ tìm hiểu xem .NET là gì, và các nền tảng .NET Framework, .NET core, và Mono khác nhau như thế nào.</p>
+<h2 id="tại-sao-cần-nắm-rõ-lý-thuyết-căn-bản">TẠI SAO CẦN NẮM RÕ LÝ THUYẾT CĂN BẢN?</h2>
+<p>Rất nhiều những người đã làm việc với .NET lâu năm nhưng vẫn mù mờ về những khái niệm, định nghĩa của Framework. Điều này rất nguy hiểm vì nó gây ra việc hiểu sai về nền tảng, dẫn đến việc sản sinh ra những phần mềm chất lượng không cao. Do đó hiểu rõ về framework của mình là trách nhiệm của bất cứ lập trình viên nào?</p>
+<h2 id="khi-nói-về-net-người-ta-thường-hàm-ý-3-thành-phần">KHI NÓI VỀ .NET, NGƯỜI TA THƯỜNG HÀM Ý 3 THÀNH PHẦN:</h2>
+<p>– Runtime (môi trường hoạt động)</p>
+<p>– Libraries (thư viện)</p>
+<p>– Toolings (công cụ phát triển).</p>
+<p>Chúng ta sẽ từ từ tìm hiểu chức năng từng thành phần ở phần sau của bài viết.</p>
+<p>Trước hết, chúng ta cần hiểu được làm thế nào .NET có thể chạy được đoạn code C#(hay VB, F#) mà bạn viết ra. Để hiểu được điều này, chúng ta cần nắm rõ quy trình biên soạn code trong .NET</p>
+<p><img src="../../images/DotNet/2.jpg" alt="image"></p>
+<p>Trong hình trên, phần ‘Compile time’ là quá trình ‘Build’, và ‘Runtime’ là quá trình chạy (tức là tính từ khi bạn khởi động ứng dụng của mình).</p>
+<p>Về cơ bản, khi bạn thực hiện lệnh build (trong Visual Studio, hay ‘dotnet build’ bằng dòng lệnh) thì source code của bạn được chuyển hóa thành một dạng ngôn ngữ trung gian có tên là MSIL (Microsoft Intermediate Language). Khi ứng dụng được khởi chạy, thành phần Runtime-hay tên gọi riêng biệt trong .NET là CLR(common language runtime) sẽ tiến hành dịch mã MSIL thành mã máy(Native code) để cho máy tính có thể thực thi. Quá trình này gọi là JIT (just-in-time) compilation. Cách biên soạn và vận hành của .NET khá giống với Java.</p>
+<p>Để hiểu rõ hơn về JIT, chúng ta hãy thử làm một thí nghiệm. Copy đoạn code sau vào file Program.cs trong project của bạn:</p>
+<p>Chúng ta sẽ tiến hành gọi cùng 1 hàm 2 lần và đo xem thời gian chạy của 2 lần gọi là bao nhiêu. (10000 ticks = 1 ms). Tiến hành chạy ‘dotnet run’ và xem kết quả.</p>
+<p>Bạn có thể thấy rằng lần chạy đầu tiên lâu hơn lần thứ 2 rất nhiều. Tại sao vậy? Đó là do khi DoSomeCalculation() được gọi lần đầu, CLR tiến hành biên soạn (JIT) hàm này thành ngôn ngữ máy. Ở những lần chạy kế tiếp, DoSomeCalculation() không cần ‘JIT’ lại (do đã được ‘JIT’ xong), nên thời gian thực thi nhanh hơn nhiều. (Điều này cũng lý giải tại sao trong một số phần mềm, thời gian thực hiện một chức năng nào đó lần đầu tiên thường chậm hơn so với các lần kế tiếp).</p>
+<p>Ngoài việc biên dịch, môi trường hoạt động (Runtime) còn có những công dụng như:</p>
+<p>– Tự động quản lý bộ nhớ. Khi làm việc với những ngôn ngữ bậc cao như C# hay Java, bạn không cần  giải phóng bộ nhớ bằng cách gọi free() như khi làm việc với C/C++. CLR bao gồm một công cụ dọn rác (Garbage collector -GC) sẽ tự động giải phóng những phần bộ nhớ không được sử dụng</p>
+<p>– Strong typings: CLR quản lý thông tin về các kiểu dữ liệu mà bạn sử dụng. Điều này giúp cho bạn có thể phân biệt được các định dạng thông tin của từng biến khác nhau (class, structure…)</p>
+<h2 id="thế-còn-hệ-thống-thư-viện-libraries-và-công-cụ-toolings-thì-sao">Thế còn hệ thống thư viện (Libraries) và công cụ (Toolings) thì sao?</h2>
+<p>Khi bạn làm việc với .NET, code của bạn sẽ tương tác với rất nhiều các class khác nhau. Ví dụ: Class được sử dụng nhiều nhất trong .NET là System.String. Tất cả những class này được định nghĩa trong hệ thống thư viện cơ bản của .NET mà người ta hay gọi tắt là BCL (Base class libraries).</p>
+<p>Các công cụ (toolings) của .NET bao gồm compiler và Visual Studio .NET sử dụng hệ thống build của Microsoft gọi là MSBuild. Đối với nền tảng .NET core mới thì chúng ta còn có thêm công cụ dòng lệnh (dotnet cli).</p>
+<h2 id="phân-biệt-net-framework-net-core-và-mono">Phân biệt .NET Framework, .NET Core, và Mono</h2>
+<p>Tại sao cần phải phân biệt chúng? Vì bạn cần phải hiểu rõ mình đang làm gì. VD: Nếu bạn có ý định chạy một Web server trên Linux thì tuyệt đối không nên sử dụng Mono.</p>
+<p>Đối với những người mới làm quen với .NET hay kể cả một số người đã làm việc với .NET lâu năm, những cái tên như .NET Framework, Mono hay gần đây nhất là .NET core vẫn hay gây ra những hiểu nhầm. Tuy nhiên những khái niệm căn bản về .NET nói trên giúp chúng ta phân biệt khá dễ dàng. Về cơ bản, .NET Framework, .NET core và Mono là ba phiên bản .NET khác nhau (có nghĩa là mỗi phiên bản có Runtime, Libraries và Toolings riêng).</p>
+<p>Vậy tại sao lại có đến 3 phiên bản khác nhau?</p>
+<p>– .NET Framework được Microsoft đưa ra chính thức từ năm 2002. .NET Framework chỉ hoạt động trên Windows. Những nền tảng ứng dụng như WPF, Winforms, ASP.NET(1-4) hoạt động dựa trên .NET Framework.</p>
+<p>– Mono là phiên bản cộng đồng nhằm mang .NET đến những nền tảng ngoài Windows. Mono được phát triển chủ yếu nhằm xây dựng những ứng dụng với giao diện người dùng và được sử dụng rất rộng rãi: Unity Game, Xamarin…</p>
+<p>– Cho đến năm 2013, Microsoft định hướng đi đa nền tảng và phát triển .NET core. .NET core hiện được sử dụng trong các ứng dụng Universal Windows platform và ASP.NET Core.</p>
+<p><img src="../../images/DotNet/3.jpg" alt="image"></p>
+<h2 id="vậy-tôi-nên-sử-dụng-net-framework-net-core-hay-mono">VẬY TÔI NÊN SỬ DỤNG .NET FRAMEWORK, .NET CORE, HAY MONO?</h2>
+<p>Điều đó tùy thuộc vào ứng dụng mà bạn có ý định phát triển. Đối với các ứng dụng Windows desktop, .NET Framework sẽ là sự lựa chọn của bạn. Nếu bạn phát triển game dựa trên Unity, hay những ứng dụng di động với Xamarin, bạn sẽ sử dụng Mono. Đối với các Web server, bạn có thể sử dụng cả .NET Framework và .NET Core.</p>
+<p>Tuyệt đối không nên dùng Mono để vận hành web server. Bộ máy dọn rác của Mono không được thiết kế để hoạt động với webserver và sẽ gây ra quá tải nhanh chóng.</p>
+<p>Vậy nên lựa chọn .NET Framework hay .NET Core cho các web server? .NET Core chạy được đa nền tảng và có hiệu năng cao hơn. Nhược điểm duy nhất của nó là số lượng thư viện hỗ trợ vẫn còn hạn chế. .NET Framework có hệ sinh thái lớn hơn với nhiều các thư viện hỗ trợ hơn.</p>
+<p>Series này sẽ sử dụng .NET Core. Chúng ta nên hướng đến tương lai đúng không?</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );">
+  </script>
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>I am deaf, also can not talk and listen. Thing I do pecfect and happy, myseff live has no 'sound'</p>
+      
+      
+        ©
+        
+          2019 -
+        
+        2020
+         Phạm Minh Chiến 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/bloghaizz/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </body>
+
+</html>

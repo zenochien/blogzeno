@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blogzenoc</title>
+    <link>https://zenochien.github.io/bloghaizz/</link>
+    <description>Recent content on blogzenoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://zenochien.github.io/bloghaizz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Keywords</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/learnkeyword/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/learnkeyword/</guid>
+      <description>The C# language reserves 77 identifiers, you learn keywords remember!! Examples of keywords are class, namespace, and using. You’ll learn the meaning of most of the C# keywords as you proceed through this book. The following is the list of keywords:
+   Learng here       abstract do in   as double int   base else interface   bool enum internal   break event is   byte explicit lock   case extern long   catch false namespace   char finally new   checked fixed null   class float object   const for operator   continue foreach out   decimal goto override   delegate implicit private    C# also uses the following identifiers.</description>
+    </item>
+    
+    <item>
+      <title>Bắt đầu học UWP</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/hocuwp/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/hocuwp/</guid>
+      <description>Tập quen học UWP Bài 1: khơi đầu public sealed partial class MainPage : Page { public MainPage() { this.InitializeComponent(); } private void Button_Click(object sender, RoutedEventArgs e) { txtMau.Text = &amp;#34;Bạn chọn màu gì &amp;#34;; string colors = string.Empty; CheckBox[] mausac = new CheckBox[] { colors1,colors2,colors3,colors4 }; foreach(var chonmau in mausac) { if (chonmau.IsChecked==true) { colors += chonmau.Content + &amp;#34;, &amp;#34;; } } txtMau.Text += colors ; } } } Minh họa Output Bài 2: Tạo Button Dynamically UWP public MainPage() { this.</description>
+    </item>
+    
+    <item>
+      <title>Hiểu về Xamarin</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/hugo-template-primer/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/hugo-template-primer/</guid>
+      <description>“Xamarin là nền tảng của Microsoft dùng để phát triển ứng dụng di động cho Android và iOS với nền tảng Mono .NET và ngôn ngữ C#.” Đó là định nghĩa về Xamarin mà bạn cần phải hiểu trước khi bắt đầu học lập trình trên nền tảng này. Vậy thì hiểu như thế nào mới đúng?
+Đầu tiên có thể bạn biết có 2 hệ điều hành di động thông minh “bự” nhất hiện tại là Android (Google) và iOS (Apple) và để phát triển ứng dụng trên đó Google và Apple đều đưa ra bộ SDK và các công cụ tương ứng để lập trình viên có thể sử dụng, ta gọi đây là phương pháp “chính chủ”, cụ thể cơ bản ta có: Android (Google): Android SDK, Java, Android Studio.</description>
+    </item>
+    
+    <item>
+      <title>Why we should study code C?</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/whywecode/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/whywecode/</guid>
+      <description>Code is bringing exciting life discoveries. It&amp;rsquo;s like exploring a secret planet.   </description>
+    </item>
+    
+    <item>
+      <title>Universal Windows Platform (UWP)</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/uwp/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/uwp/</guid>
+      <description>UWP là gì? UWP - viết tắt &amp;ldquo;Universal Windows Platform&amp;rdquo; là một nền tảng cốt lõi của Windows 10 giúp các ứng dụng thực hiện được những tính năng của mình, và điểm hay nhất nằm ở chỗ UWP sẽ hoạt động thống nhất trên tất cả mọi thiết bị nào có khả năng chạy Windows 10, từ điện thoại, máy tính bảng, PC cho đến HoloLens và Xbox. Nếu không có UWP thì sẽ không có các app universal cho chúng ta xài, và Microsoft cũng khó mà thực hiện được chiến lược &amp;ldquo;One Windows&amp;rdquo; của họ đối với hệ sinh thái Windows 10.</description>
+    </item>
+    
+    <item>
+      <title>C# là cái gì? Tui đéo hiểu</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/netlacaigi/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/netlacaigi/</guid>
+      <description>This might be a stupid question, or oversight on my part, but.. If you type &amp;lsquo;method&amp;rsquo; inside an attribute definition, as below:
+Tạm dịch: Câu hỏi ngu ngốc phải đây, điều vô lý khiến tôi bỏ sức. Nếu bạn nhập &amp;lsquo;method&amp;rsquo; bên trong một định nghĩa thuộc tính:
+[method: ] public class MyClass Visual Studio highlights (highlight = điểm nổi bật) the keyword. It doesn&amp;rsquo;t seem to highlight it outside of an attribute (attribute = thuộc tính) as far as I can tell, and hitting (hitting = bấm) F1 in VS (Visual Stiodio) boots you to a 404.</description>
+    </item>
+    
+    <item>
+      <title>.NET core vs ASP.NET core: Phân biệt .NET Framework, .NET Core và Mono </title>
+      <link>https://zenochien.github.io/bloghaizz/posts/netcore/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/netcore/</guid>
+      <description>Một trong những điểm mạnh của hệ sinh thái .NET là sự hỗ trợ rất tốt của các công cụ như Visual Studio. Tuy nhiên đây cũng là điểm yếu vì nó ngăn cản rất nhiều lập trình viên tiếp xúc với những lý thuyết căn bản của Framework. Trong bài viết này chúng ta sẽ tìm hiểu xem .NET là gì, và các nền tảng .NET Framework, .NET core, và Mono khác nhau như thế nào.</description>
+    </item>
+    
+    <item>
+      <title>Không, xin đừng &#39;nhảy&#39; vào học code! </title>
+      <link>https://zenochien.github.io/bloghaizz/posts/hococde/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/hococde/</guid>
+      <description>Bạn NÊN học code. Nhưng đừng ảo tưởng, và cũng đừng vội vàng. Nước Mỹ dường như đang trải qua một cơn sốt học code. Cựu thị trưởng New York và cũng là huyền thoại kinh doanh Michael Bloomberg cùng các tổ chức phi lợi nhuận như Code.org đều lên tiếng khẳng định code là một kỹ năng cần thiết cho cơ hội việc làm của tương lai. Kênh truyền hình HBO có hẳn một series xây dựng nên hình tượng những anh chàng coder trẻ tuổi làm việc và&amp;hellip; hút cỏ thâu đêm, cùng lúc kiếm hàng triệu USD.</description>
+    </item>
+    
+    <item>
+      <title>Git là gì? Các lệnh git cơ bản mà mọi lập trình viên nên biết</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/git/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/git/</guid>
+      <description>Git là gì? Git là một hệ thống quản lý phiên bản phân tán (Distributed Version Control System – DVCS), nó là một trong những hệ thống quản lý phiên bản phân tán phổ biến nhất hiện nay. Git cung cấp cho mỗi lập trình viên kho lưu trữ (repository) riêng chứa toàn bộ lịch sử thay đổi.
+Version Control System – VCS là gì? VCS là viết tắt của Version Control System là hệ thống kiểm soát các phiên bản phân tán mã nguồn mở.</description>
+    </item>
+    
+    <item>
+      <title>Hugo coder wiki</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/hugo-coder-wiki/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/hugo-coder-wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DotNet là gì?</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/dotnet/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/dotnet/</guid>
+      <description>DotNet là gì? Dot Net (viết tắt .NET) là một nền tảng (Framework) cho phép lập trình viên sử dụng để phát triển các ứng dụng, website. Nền tảng này được phát triển bởi Microsoft nó chạy trên hệ điều hành Microsoft Window. Chú ý rằng .NET không phải là ngôn ngữ lập trình, mà là nền tảng cho phép các ngôn ngữ lập trình khác nhau như C# sử dụng để tạo nên các website, ứng dụng trên Internet.</description>
+    </item>
+    
+    <item>
+      <title>C# là gì? C# được sử dụng làm gì?</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/cshap/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/cshap/</guid>
+      <description>C# là gì? C# là một ngôn ngữ lập trình hướng đối tượng, mã nguồn mở, đơn giản, hiện đại, linh hoạt. C# được phát triển bởi Microsoft và được phê chuẩn bởi European Computer Manufacturers Association (ECMA) và International Standards Organization (ISO).
+Microsoft phát triển C# dựa trên C++ và Java. C# được miêu tả là ngôn ngữ có được sự cân bằng giữa C++, Visual Basic, Delphi và Java.</description>
+    </item>
+    
+    <item>
+      <title>Đéo hiểu .Net Core là cái gì mà tui mù công nghệ</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/congnghenetcore/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/congnghenetcore/</guid>
+      <description>.Net Core is Open Source (Tạm dịch: .Net Core là nguồn mở) This is a natural progression of our open source efforts, which already covers the managed compilers (C#, VB, and F#) as well as ASP.NET:
+ C# &amp;amp; Visual Basic (“Roslyn”) Visual F# Tools ASP.NET 5 Entity Framework  This takes it to the next level by extending it to the .NET runtime and the core framework.
+ .NET Core Framework  He ask &amp;lsquo;What is .</description>
+    </item>
+    
+    <item>
+      <title>Hardware Intrinsics in .NET Core</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/code_netcore/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/code_netcore/</guid>
+      <description>Vài năm trước, chúng tôi đã quyết định là hỗ trợ mã SMID trong net. Mình giới thiệu giá trị System.Numerics không gian với Vector2, Vector3, Vector4, Vector&amp;lt;T&amp;gt;, và các loại liên quan.
+SIMD is a technology that employs data parallelization at the CPU level. Multi-threading and SIMD complement each other: multi-threading allows parallelizing work over multiple cores while SIMD allows parallelizing work within a single core. Tạm dịch : SIMD là một công nghệ sử dụng song song dữ liệu ở cấp độ CPU.</description>
+    </item>
+    
+    <item>
+      <title>Bắt đầu với ASP.NET Core</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/asp.net-core/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/asp.net-core/</guid>
+      <description>Bắt đầu với ASP.NET Core Vào năm 2015, Microsoft ra mắt nền tảng .NET Core – một phiên bản cross-platform của .NET framework, nay không còn phụ thuộc vào Windows APIs như trước nữa. Cùng với đó họ cũng nâng cấp bộ MVC Framework truyền thống là ASP.NET để chạy được trên nền .NET Core với tên là ASP.NET Core MVC.
+Tới giai đoạn hiện tại các framework này đã qua gần hết 2 thế hệ và chuẩn bị qua thế hệ thứ 3, với nhiều cập nhật và thay đổi đáng kể về hiệu năng.</description>
+    </item>
+    
+    <item>
+      <title>8 Sai Lầm Newbie Thường Gặp Trong Lập Trình</title>
+      <link>https://zenochien.github.io/bloghaizz/posts/8-sailam/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/posts/8-sailam/</guid>
+      <description>Bài viết này sẽ chỉ ra cho các bạn những lỗi thường gặp phải ở những người mới bắt đầu chập chững vào nghề để từ đó chúng ta sẽ có thể lưu ý và tránh những lỗi này trong công việc về sau. 1. Không chia nhỏ code. Mình nghĩ đây có lẽ là 1 điều rất hay gặp ở các bạn mới vào nghề. Các bạn thường cứ cố nhồi nhét thật nhiều thật nhiều code vào một file, nào là function, nào là class, nào là module.</description>
+    </item>
+    
+    <item>
+      <title>About Deaf Life</title>
+      <link>https://zenochien.github.io/bloghaizz/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/about/</guid>
+      <description>Deaf can not listen. Deaf people cannot hear sounds. How they do ‘hear’ words and talk? Deaf people use American Sign Language (ASL).They talk with their hands. Sometimes two deaf people ‘talk’ to each other. They both use ASL. Sometimes a person who can hear interprets for deaf people. The person listens to someone talking, and then he or she makes hand signs.
+Deaf can not talk. There are two kinds of sign language.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://zenochien.github.io/bloghaizz/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/contact/</guid>
+      <description>Bạn thắc mắc vui lòng nhắn tin qua email. Liên hệ nhắn tin Facebook hoặc số điện thoại 0776850688</description>
+    </item>
+    
+    <item>
+      <title>First snippet</title>
+      <link>https://zenochien.github.io/bloghaizz/snippets/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/snippets/first/</guid>
+      <description>This content is in snippets/first/index.md
+pwd </description>
+    </item>
+    
+    <item>
+      <title>My CV</title>
+      <link>https://zenochien.github.io/bloghaizz/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/projects/</guid>
+      <description>OBJECTIVE I am deaf, also can&amp;rsquo;t talk - listen. But I have to write something to paper or speak by app &amp;lsquo;Talk to deaf&amp;rsquo;. I want to be a part of your company to contribute to the development of the company in the future. I believe that when I work in such a good environment, I will have more experience and improve my skills to become a back-end developer. I am hard working, eager to learn.</description>
+    </item>
+    
+    <item>
+      <title>Second snippet</title>
+      <link>https://zenochien.github.io/bloghaizz/snippets/second/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zenochien.github.io/bloghaizz/snippets/second/</guid>
+      <description>This content is in snippets/second/index.md
+ls -la </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Phạm Minh Chiến">
+    <meta name="description" content="“Xamarin là nền tảng của Microsoft dùng để phát triển ứng dụng di động cho Android và iOS với nền tảng Mono .NET và ngôn ngữ C#.” Đó là định nghĩa về Xamarin mà bạn cần phải hiểu trước khi bắt đầu học lập trình trên nền tảng này. Vậy thì hiểu như thế nào mới đúng?
+Đầu tiên có thể bạn biết có 2 hệ điều hành di động thông minh “bự” nhất hiện tại là Android (Google) và iOS (Apple) và để phát triển ứng dụng trên đó Google và Apple đều đưa ra bộ SDK và các công cụ tương ứng để lập trình viên có thể sử dụng, ta gọi đây là phương pháp “chính chủ”, cụ thể cơ bản ta có: Android (Google): Android SDK, Java, Android Studio.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hiểu về Xamarin"/>
+<meta name="twitter:description" content="“Xamarin là nền tảng của Microsoft dùng để phát triển ứng dụng di động cho Android và iOS với nền tảng Mono .NET và ngôn ngữ C#.” Đó là định nghĩa về Xamarin mà bạn cần phải hiểu trước khi bắt đầu học lập trình trên nền tảng này. Vậy thì hiểu như thế nào mới đúng?
+Đầu tiên có thể bạn biết có 2 hệ điều hành di động thông minh “bự” nhất hiện tại là Android (Google) và iOS (Apple) và để phát triển ứng dụng trên đó Google và Apple đều đưa ra bộ SDK và các công cụ tương ứng để lập trình viên có thể sử dụng, ta gọi đây là phương pháp “chính chủ”, cụ thể cơ bản ta có: Android (Google): Android SDK, Java, Android Studio."/>
+
+    <meta property="og:title" content="Hiểu về Xamarin" />
+<meta property="og:description" content="“Xamarin là nền tảng của Microsoft dùng để phát triển ứng dụng di động cho Android và iOS với nền tảng Mono .NET và ngôn ngữ C#.” Đó là định nghĩa về Xamarin mà bạn cần phải hiểu trước khi bắt đầu học lập trình trên nền tảng này. Vậy thì hiểu như thế nào mới đúng?
+Đầu tiên có thể bạn biết có 2 hệ điều hành di động thông minh “bự” nhất hiện tại là Android (Google) và iOS (Apple) và để phát triển ứng dụng trên đó Google và Apple đều đưa ra bộ SDK và các công cụ tương ứng để lập trình viên có thể sử dụng, ta gọi đây là phương pháp “chính chủ”, cụ thể cơ bản ta có: Android (Google): Android SDK, Java, Android Studio." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zenochien.github.io/bloghaizz/posts/hugo-template-primer/" />
+<meta property="article:published_time" content="2020-01-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-14T00:00:00+00:00" />
+
+
+
+
+    <title>
+  Hiểu về Xamarin · blogzenoc
+</title>
+
+    
+      <link rel="canonical" href="https://zenochien.github.io/bloghaizz/posts/hugo-template-primer/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/bloghaizz/css/coder.min.f01c647a0d25b40da992a37c3376291185eed8a50ced8c26cc2c0bcfe38c97df.css" integrity="sha256-8Bxkeg0ltA2pkqN8M3YpEYXu2KUM7YwmzCwLz&#43;OMl98=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/bloghaizz/css/coder-dark.min.126ad3988d46bdae6217a11105b53c9662bca05f39d42d3c0fb366919d334620.css" integrity="sha256-EmrTmI1Gva5iF6ERBbU8lmK8oF851C08D7NmkZ0zRiA=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/bloghaizz/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/bloghaizz/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/bloghaizz/images/apple-touch-icon.png">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.76.5" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/bloghaizz">
+      blogzenoc
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/about/">About Me</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/posts/">BlogZenoC</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/projects/">My CV</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/bloghaizz/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://zenochien.github.io/bloghaizz/pt-br/"></a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Hiểu về Xamarin</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2020-01-14T00:00:00Z'>
+                October, 14140
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          <div class="authors">
+    <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="/bloghaizz/authors/jane-smith/">Jane Smith</a></div>
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/bloghaizz/categories/development/">Development</a>
+      <span class="separator">•</span>
+    <a href="/bloghaizz/categories/xamarin/">Xamarin</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <a href="/bloghaizz/tags/c/">C#</a>
+      <span class="separator">•</span>
+    <a href="/bloghaizz/tags/net/">Net</a>
+      <span class="separator">•</span>
+    <a href="/bloghaizz/tags/xamarin/">Xamarin</a>
+      <span class="separator">•</span>
+    <a href="/bloghaizz/tags/themes/">themes</a>
+      <span class="separator">•</span>
+    <a href="/bloghaizz/tags/development/">development</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>“Xamarin là nền tảng của Microsoft dùng để phát triển ứng dụng di động cho Android và iOS với nền tảng Mono .NET và ngôn ngữ C#.” Đó là định nghĩa về Xamarin mà bạn cần phải hiểu trước khi bắt đầu học lập trình trên nền tảng này. Vậy thì hiểu như thế nào mới đúng?</p>
+<p>Đầu tiên có thể bạn biết có 2 hệ điều hành di động thông minh “bự” nhất hiện tại là Android (Google) và iOS (Apple) và để phát triển ứng dụng trên đó Google và Apple đều đưa ra bộ SDK và các công cụ tương ứng để lập trình viên có thể sử dụng, ta gọi đây là phương pháp “chính chủ”, cụ thể cơ bản ta có:
+<img src="../../images/10.jpg" alt="image"></p>
+<pre><code>Android (Google): Android SDK, Java, Android Studio.
+iOS (Apple): iOS SDK, Swift, Xcode
+</code></pre>
+<p>Vậy để phát triển ứng dụng cho Android, bạn phải:</p>
+<pre><code>Học ngôn ngữ Java
+Hiểu về Android SDK
+Kiến trúc ứng dụng
+Cách xây dựng giao diện
+Xử lý tương tác người dùng
+…
+</code></pre>
+<p>Và tương tự cho iOS. Rất nhiều thứ bạn phải làm chủ khi muốn phát triển ứng dụng di động và một lập trình viên di động thường họ sẽ gắn bó với một hệ điều hành trước và thường chỉ cần họ tiếp tục tích luỹ kinh nghiệm và kiến thức thì lương cũng đã rủng rỉnh rồi.</p>
+<p>Tuy nhiên về phía doanh nghiệp, khi họ cần phát triển ứng dụng di động phụ vụ mô hình kinh doanh của mình thì việc không thể bỏ qua là phải có ứng dụng chạy được trên cả 2 hệ điều hành “bự” trên. Về cơ bản họ sẽ phải xây dựng 2 đội ngủ riêng biệt cho mỗi hệ điệu hành và mặc dù cùng chức năng nhưng sẽ phát triển 2 lần. Không có gì để nói nếu doanh nghiệp bạn cũng “bự” luôn, nhưng đối với doanh nghiệp nhỏ hoặc sản phẩm nhỏ hoặc cần thời gian thử nghiệm thị trường nhanh… thì việc phát triển ứng dụng đa nền tảng trên sẽ là vấn đề.</p>
+<p>Có cầu thì phải có cung cho phù hợp. Do đó các công nghệ hỗ trợ đa nền tảng lần lượt ra đời, phát triển qua nhiều thế hệ, với ưu điểm, khuyết điểm đan xen. Trong đó có Xamarin.
+<img src="../../images/11.jpg" alt="image">
+Khi Xamarin ra đời nó chỉ thay thế phương pháp “chính chủ” ở trên ở một chỗ duy nhất là ngôn-ngữ-lập-trình. Nghĩa là thay vì Android bạn sử dụng Java, iOS sử dụng Swift thì giờ bạn chỉ cần sử dụng một-ngôn-ngữ là C#.</p>
+<p>Hay nói cách khác nếu có 2 người muốn trở thành lập trình viên Android, người A bắt đầu bằng học Java, người B bắt đầu bằng học C#, còn lộ trình còn lại thì 100% y hệt nhau (như đã liệt kê ở trên). Tương tự với iOS.
+<img src="../../images/12.jpg" alt="image">
+Quay lại với doanh nghiệp, vậy nếu dùng Xamarin, thì họ cũng phải xây 2 đội ngủ Xamarin.Android và Xamarin.iOS để phát triển sản phẩm di động của mình. Giả sử chi phí nhân lực là như nhau, thì so với phương pháp “chính chủ” thì họ tiết kiệm được gì?</p>
+<p>Họ sẽ rút ngắn được thời gian phát triển do các module về logic, data, truy cập web API,.. có thể chia sẻ giữa 2 nền tảng do cùng sử dụng C# .NET. Việc khác nhau giữa 2 đội ngủ lúc này là phát triển UI/UX và các chức năng đặc trưng của mỗi nền tảng.</p>
+<p>Tuy nhiên ở đâu đó vẫn có nhu cầu phát triển ứng dụng đa nền tảng với các ứng dụng nhỏ gọn hay không quá phức tạp với chi phí thấp hơn hoặc thời gian phát triển ngắn hơn thì có công nghệ nào có thể đáp ứng hoặc cụ thể Xamarin có đáp ứng không?
+<img src="../../images/13.jpg" alt="image">
+Câu trả lời là có. Để đáp ứng nhu cầu trên, Xamarin ra mắt một thư viện và một kiến trúc mới tên là Xamarin.Forms. Nó sẽ hỗ trợ xây dựng giao diện mà khi thực thi nó sẽ được đọc và chuyển sang giao diện ứng với nền tảng Xamarin.Android hay Xamarin.iOS tương ứng, giao diện được định nghĩa bằng C# hoặc XAML. Như vậy sẽ rút ngắn được rất nhiều do có thể chia sẻ từ 80-100% lượng code cho cả 2 nền tảng. Tuy nhiên sản phẩm của bạn sẽ bị hạn chế về tốc độ xử lý UI do phải qua một bước trung gian. Nếu sự thay đổi này không đáng kể thì tại sao không?</p>
+<p>Tuy nhiên ngoài Xamarin thì cũng có những công nghệ khác tương tự trong lĩnh vực lập trình ứng dụng di động đa nền tảng, như ReactNative, Flutter,…</p>
+<p>Vậy nếu bạn đang muốn bước vào lập trình di động thì đâu là lựa chọn thích hợp? Sau đây là một số đặc trưng của lập trình di động (LTDĐ) nói chung và lập trình Xamarin nói riêng, bạn có thể dựa vào chúng để xác định mình có phù hợp không</p>
+<ul>
+<li>Khá tốn kém khoản đầu tư về máy tính, điện thoại (đặc biệt là iOS)</li>
+<li>Phải làm chủ được ngôn ngữ lập trình tương ứng (Java, Swift, C#, Javascript)</li>
+<li>Hiểu về hệ điều hành di động, UI/UX cơ bản của hệ điều hành đó, nếu làm đa nền tảng thì phải hiểu hết cả hai</li>
+<li>Ứng dụng di động sẽ phụ thuộc vào hệ điều hành và nhà cung cấp, họ cho sử dụng như thế nào thì phải theo họ 
+(vd muốn sử dụng GPS phải xin phép người dùng)</li>
+<li>Nếu làm trên đa nền tảng thì các kiến thức về sharing code, dependency, packaging… là điều không thể thiếu</li>
+<li>Các công nghệ đa nền tảng cho bạn một bộ UI Framework chung (như Xamarin.Forms có XAML, ReactNative có React), nên bạn phải tìm hiểu cách sử dụng chúng (như cách trình bày, cách binding dữ liệu) và ngoài ra bạn cũng phải tìm hiểu thêm về UI cơ bản của riêng Android, iOS nếu bạn muốn xây dựng thêm nhiều thứ</li>
+<li>Riêng Xamarin, sử dụng IDE là Visual Studio, một IDE tốt nhưng “nặng”</li>
+<li>Các thư viện đa nền tảng đôi khi có những lỗi của chính nó, gây ảnh hưởng tới việc phát triển của dự án
+<img src="../../images/14.jpg" alt="image"></li>
+</ul>
+<p>Túm lại, Xamarin là nền tảng “mì ăn liền” đối với doanh nghiệp, nhưng không phải “mì ăn liền” đối với lập trình viên.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+    
+    
+    
+      <h3>See also in Hugo</h3>
+      <nav>
+        <ul>
+        
+        
+          
+        
+          
+            <li>
+              <a href="https://github.com/luizdepra/hugo-coder/wiki">Hugo coder wiki</a>
+            </li>
+          
+        
+        </ul>
+      </nav>
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>I am deaf, also can not talk and listen. Thing I do pecfect and happy, myseff live has no 'sound'</p>
+      
+      
+        ©
+        
+          2019 -
+        
+        2020
+         Phạm Minh Chiến 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+        
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/bloghaizz/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  </body>
+
+</html>
